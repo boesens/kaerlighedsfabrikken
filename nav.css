@@ -1,0 +1,132 @@
+/* Fælles menu og baggrundsfilter – bruges på alle sider */
+
+/* Analogt foto-look til baggrundsbilledet: filmkorn og mørke hjørner */
+:root {
+  --photo-filter: sepia(0.2) contrast(1.15) brightness(1.04);
+  --photo-vignette: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(20,12,4,0.45) 100%);
+  --photo-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.1  0 0 0 0 0.07  0 0 0 0 0.03  0.5 0.5 0.5 0 -0.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 32px;
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.nav-logo {
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 2.08rem;
+  font-weight: 700;
+  color: #1a1208;
+  text-decoration: none;
+  margin-right: auto;
+  line-height: 1;
+  transform: rotate(-6deg);
+  display: inline-block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: #1a1208;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 11px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.nav-links a:hover { background: #f0f0f0; transform: translateY(-1px); }
+.nav-links a.active { background: #f0f0f0; }
+
+.btn-join {
+  background: #ffffff;
+  color: #1a1208;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.btn-join:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+.hamburger {
+  display: none;
+  background: #fcc935;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.56rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #1a1208;
+  font-weight: 700;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 82px; left: 0; right: 0;
+  z-index: 99;
+  background: rgba(245, 240, 232, 0.97);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  padding: 16px 24px 24px;
+  gap: 10px;
+  border-bottom: 2px solid #fcc935;
+}
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  color: #1a1208;
+  font-size: 1.17rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #fcc935;
+  padding: 13px 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.2s;
+}
+.mobile-menu a:hover { background: #fdd55e; }
+.mobile-menu .mobile-cta { background: #1a1208; color: white; }
+
+/* Kun synlig lokalt – nav.js sætter is-local på <html> */
+html:not(.is-local) .local-only { display: none !important; }
+
+/* RESPONSIVE */
+@media (max-width: 1040px) {
+  .nav { padding: 16px 20px; }
+  .nav-links, .btn-join { display: none; }
+  .hamburger { display: block; }
+}

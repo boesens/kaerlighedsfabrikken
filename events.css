@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --gold: #e8a020;
+  --gold: #fcc935;
   --dark: #1a1208;
   --white: #ffffff;
 }
@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Patrick Hand SC', cursive;
   color: var(--dark);
   background: #f5f0e8;
 }
@@ -22,78 +22,15 @@ body {
   inset: 0;
   background: url('hero.png') center top / cover no-repeat;
   z-index: 0;
-  filter: blur(1.2px);
+  filter: var(--photo-filter) blur(1.2px);
   transform: scale(1.05);
 }
 .bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(245, 240, 232, 0.88);
+  background: var(--photo-vignette), var(--photo-grain), rgba(245, 240, 232, 0.88);
 }
-
-/* NAV */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 18px 40px;
-  background: rgba(245, 240, 232, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(232, 160, 32, 0.2);
-}
-
-.nav-logo {
-  font-family: 'Cormorant Garant', serif;
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--dark);
-  text-decoration: none;
-  margin-right: auto;
-  white-space: nowrap;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 12px;
-}
-
-.nav-links a {
-  color: var(--dark);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: var(--gold);
-  padding: 11px 20px;
-  border-radius: 50px;
-  transition: background 0.2s;
-}
-.nav-links a:hover, .nav-links a.active { background: #f5b830; }
-
-.btn-join {
-  background: var(--gold);
-  color: var(--dark);
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 16px 32px;
-  border-radius: 50px;
-  transition: background 0.2s, transform 0.15s;
-  white-space: nowrap;
-}
-.btn-join:hover { background: #f5b830; transform: translateY(-1px); }
-.white-heart { color: #ffffff; }
 
 /* MAIN */
 .main {
@@ -109,7 +46,7 @@ body {
 }
 
 .page-header h1 {
-  font-family: 'Cormorant Garant', serif;
+  font-family: 'Patrick Hand SC', cursive;
   font-size: clamp(2.4rem, 5vw, 3.5rem);
   font-weight: 800;
   color: var(--dark);
@@ -117,8 +54,8 @@ body {
 }
 
 .subtitle {
-  font-size: 0.9rem;
-  color: rgba(26,18,8,0.55);
+  font-size: 1.64rem;
+  color: #000000;
   letter-spacing: 0.06em;
 }
 
@@ -128,11 +65,11 @@ body {
 }
 
 .month-title {
-  font-family: 'Cormorant Garant', serif;
-  font-size: 1.4rem;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.82rem;
   font-weight: 700;
   color: var(--dark);
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 2px solid var(--dark);
   padding-bottom: 10px;
   margin-bottom: 20px;
   display: inline-block;
@@ -152,7 +89,7 @@ body {
   align-items: center;
   gap: 24px;
   box-shadow: 0 2px 16px rgba(26,18,8,0.07);
-  border: 1px solid rgba(232,160,32,0.15);
+  border: 1px solid rgba(26,18,8,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .event-card:hover {
@@ -167,18 +104,18 @@ body {
 }
 .day {
   display: block;
-  font-family: 'Cormorant Garant', serif;
-  font-size: 2.4rem;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 3.12rem;
   font-weight: 800;
-  color: var(--gold);
+  color: var(--dark);
   line-height: 1;
 }
 .month-short {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.91rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: rgba(26,18,8,0.4);
+  color: #000000;
   text-transform: uppercase;
   margin-top: 2px;
 }
@@ -194,9 +131,9 @@ body {
 }
 
 .city-tag {
-  background: var(--gold);
-  color: var(--dark);
-  font-size: 0.7rem;
+  background: var(--dark);
+  color: #ffffff;
+  font-size: 0.91rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -206,8 +143,8 @@ body {
 
 .type-tag {
   background: rgba(26,18,8,0.08);
-  color: rgba(26,18,8,0.6);
-  font-size: 0.7rem;
+  color: #000000;
+  font-size: 0.91rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -216,16 +153,16 @@ body {
 }
 
 .event-info h3 {
-  font-family: 'Cormorant Garant', serif;
-  font-size: 1.3rem;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.69rem;
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 6px;
 }
 
 .event-info p {
-  font-size: 0.88rem;
-  color: rgba(26,18,8,0.65);
+  font-size: 1.6rem;
+  color: #000000;
   line-height: 1.6;
   margin-bottom: 12px;
 }
@@ -234,16 +171,16 @@ body {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  font-size: 0.78rem;
-  color: rgba(26,18,8,0.45);
+  font-size: 1.41rem;
+  color: #000000;
 }
 
 .event-btn {
   flex-shrink: 0;
   background: var(--gold);
   color: var(--dark);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.07rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -253,58 +190,7 @@ body {
   transition: background 0.2s, transform 0.15s;
   white-space: nowrap;
 }
-.event-btn:hover { background: #f5b830; transform: translateY(-1px); }
-
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  background: #e8a020;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  padding: 9px 15px;
-  cursor: pointer;
-  color: #1a1208;
-  font-weight: 700;
-  margin-left: auto;
-}
-
-/* MOBILE MENU */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 66px; left: 0; right: 0;
-  z-index: 99;
-  background: rgba(245, 240, 232, 0.97);
-  backdrop-filter: blur(10px);
-  flex-direction: column;
-  padding: 16px 24px 24px;
-  gap: 10px;
-  border-bottom: 2px solid #e8a020;
-}
-.mobile-menu.open { display: flex; }
-.mobile-menu a {
-  color: #1a1208;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #e8a020;
-  padding: 13px 20px;
-  border-radius: 50px;
-  text-align: center;
-  transition: background 0.2s;
-}
-.mobile-menu a:hover { background: #f5b830; }
-.mobile-menu .mobile-cta { background: #1a1208; color: white; }
-
-@media (max-width: 900px) {
-  .nav { padding: 14px 20px; gap: 12px; }
-  .nav-links { display: none; }
-  .btn-join { display: none; }
-  .hamburger { display: block; }
-}
+.event-btn:hover { background: #fdd55e; transform: translateY(-1px); }
 
 @media (max-width: 640px) {
   .main { padding: 90px 16px 60px; }

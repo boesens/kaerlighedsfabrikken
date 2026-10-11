@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpiriDrinks – Noter</title>
+  <meta name="robots" content="noindex" />
+  <script>
+    // Noter-siden vises kun lokalt (localhost eller åbnet direkte som fil)
+    if (!['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname)) location.replace('index.html');
+  </script>
+  <link rel="stylesheet" href="noter.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Caveat:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><span class="logo-spiri">Spiri</span><span class="logo-drinks">Drinks</span></a>
+    <ul class="nav-links">
+      <li><a href="events.html">SpiriDrinks Events</a></li>
+      <li><a href="filosofi.html">Filosofi</a></li>
+      <li><a href="vaert.html">Din vært</a></li>
+      <li class="local-only"><a href="noter.html" class="active">Noter</a></li>
+    </ul>
+    <a href="tilmeld.html" class="btn-join">Inviter mig</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="events.html">SpiriDrinks Events</a>
+    <a href="filosofi.html">Filosofi</a>
+    <a href="vaert.html">Din vært</a>
+    <a href="noter.html" class="local-only">Noter</a>
+    <a href="tilmeld.html" class="mobile-cta">Inviter mig</a>
+  </div>
+
+  <main class="main">
+    <h1>Noter</h1>
+    <p class="subtitle">Mine noter til siden – hver note får datoen for, hvornår den er skrevet. Træk i ⠿ for at prioritere.</p>
+
+    <form class="note-form" id="noteForm">
+      <textarea id="noteText" placeholder="Skriv en ny note..." required></textarea>
+      <button type="submit">Tilføj note</button>
+    </form>
+
+    <div class="notes" id="noteList">
+      <article class="note" data-id="2026-10-11-logo">
+        <p class="note-date">11. oktober 2026</p>
+        <p class="note-text">Logo skal være anderledes, der er ubalance i logo.</p>
+      </article>
+    </div>
+  </main>
+
+  <script src="noter.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

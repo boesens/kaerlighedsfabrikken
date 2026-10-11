@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SpiriDrinks – Filosofi</title>
   <link rel="stylesheet" href="filosofi.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Caveat:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="nav.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Caveat:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,21 +14,23 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">✦ SpiriDrinks</a>
+    <a href="index.html" class="nav-logo"><span class="logo-spiri">Spiri</span><span class="logo-drinks">Drinks</span></a>
     <ul class="nav-links">
       <li><a href="events.html">SpiriDrinks Events</a></li>
       <li><a href="filosofi.html" class="active">Filosofi</a></li>
       <li><a href="vaert.html">Din vært</a></li>
+      <li class="local-only"><a href="noter.html">Noter</a></li>
     </ul>
+    <a href="tilmeld.html" class="btn-join">Inviter mig</a>
     <button class="hamburger" id="hamburger">☰</button>
-    <a href="tilmeld.html" class="btn-join">Inviter mig <span class="white-heart">❤</span></a>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="events.html">SpiriDrinks Events</a>
     <a href="filosofi.html">Filosofi</a>
     <a href="vaert.html">Din vært</a>
-    <a href="tilmeld.html" class="mobile-cta">Inviter mig ❤</a>
+    <a href="noter.html" class="local-only">Noter</a>
+    <a href="tilmeld.html" class="mobile-cta">Inviter mig</a>
   </div>
 
   <!-- INDHOLD -->
@@ -35,7 +38,7 @@
 
     <div class="intro">
       <p class="eyebrow">✦ Vores filosofi ✦</p>
-      <h1>Et sted for dem<br>der søger – uden at<br><em>skulle</em> noget</h1>
+      <h1>Et sted for dem<br>der <em>søger</em> – uden at<br>skulle noget</h1>
     </div>
 
     <div class="content">
