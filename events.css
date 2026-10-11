@@ -175,6 +175,12 @@ body {
   color: #000000;
 }
 
+/* Emojis vises som sorte ikoner */
+.meta-icon {
+  display: inline-block;
+  filter: grayscale(1) brightness(0.45) contrast(2.4);
+}
+
 .event-btn {
   flex-shrink: 0;
   background: var(--gold);

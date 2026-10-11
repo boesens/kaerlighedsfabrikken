@@ -45,33 +45,71 @@ body {
 
 .brand-text {
   font-family: 'Patrick Hand SC', cursive;
-  font-size: clamp(2.4rem, 5.84vw, 5.36rem);
+  font-size: clamp(1.92rem, 4.67vw, 4.29rem);
   font-weight: 600;
   line-height: 1;
   transform: rotate(-6deg);
   display: inline-block;
-  background: #ffffff;
   padding: 0.12em 0.32em 0.16em;
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(26,18,8,0.4), 0 1px 3px rgba(26,18,8,0.3);
   position: relative;
   filter: var(--photo-filter);
 }
-.brand-text::after {
-  content: '';
+/* Sort kant om de gule bogstaver: en sort kopi af ordet ligger bagved */
+.brand-word {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  white-space: nowrap;
+}
+.brand-word::before {
+  content: attr(data-text);
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--photo-grain);
+  left: 0;
+  top: 0;
+  color: var(--dark);
+  -webkit-text-stroke: 0.1em var(--dark);
+  stroke-linejoin: round;
+}
+.brand-text .logo-spiri,
+.brand-text .logo-drinks {
+  /* Gul med samme filmkorn som solen i tegningen */
+  color: var(--gold);
+  background: var(--photo-grain), var(--gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+/* Fartstreg: en spiral i hver ende, forbundet af en bue under logoet.
+   Samme stregtykkelse og runde ender som bogstaverne */
+.brand-swoosh {
+  position: absolute;
+  left: -11%;
+  top: -10%;
+  width: 124%;
+  height: 118%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--dark);
+  stroke-width: 0.085em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   pointer-events: none;
+}
+.brand-swoosh path { vector-effect: non-scaling-stroke; }
+/* Tynd gul kant om stregen: en lidt bredere gul streg bagved */
+.brand-swoosh .swoosh-edge {
+  stroke: #d9a62a;
+  stroke-width: 0.125em;
 }
 
 @media (max-width: 900px) {
-  .branding { left: 24px; top: 116px; }
-  .brand-text { font-size: clamp(1.92rem, 8vw, 3.2rem); }
+  .branding { left: 48px; top: 116px; }
+  .brand-text { font-size: clamp(1.54rem, 6.4vw, 2.56rem); }
 }
 
 @media (max-width: 480px) {
-  .branding { left: 16px; top: 108px; }
-  .brand-text { font-size: clamp(1.6rem, 9.6vw, 2.4rem); }
+  .branding { left: 40px; top: 108px; }
+  .brand-text { font-size: clamp(1.28rem, 7.68vw, 1.92rem); }
 }
