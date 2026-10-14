@@ -1,0 +1,319 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #fcc935;
+  --dark: #1a1208;
+  --white: #ffffff;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Patrick Hand SC', cursive;
+  color: var(--dark);
+  background: #f5f0e8;
+}
+
+/* BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url('hero.svg') center top / cover no-repeat;
+  z-index: 0;
+  filter: var(--photo-filter) blur(1.2px);
+  transform: scale(1.05);
+}
+.bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--photo-vignette), var(--photo-grain), rgba(245, 240, 232, 0.88);
+}
+
+/* MAIN */
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 110px 24px 80px;
+}
+
+.page-header {
+  margin-bottom: 48px;
+}
+
+.page-header h1 {
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.64rem;
+  line-height: 1.4;
+  color: #000000;
+  text-wrap: pretty;
+}
+
+/* BEHANDLINGER */
+.treatments {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.treatment-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  box-shadow: 0 2px 16px rgba(26,18,8,0.07);
+  border: 1px solid rgba(26,18,8,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  scroll-margin-top: 100px;
+}
+.treatment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(26,18,8,0.12);
+}
+
+/* Ikoner i samme tuschstreg som tegningen */
+.treatment-icon {
+  flex-shrink: 0;
+  width: 64px;
+}
+.treatment-icon svg {
+  display: block;
+  width: 100%;
+  fill: none;
+  stroke: var(--dark);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.treatment-icon .icon-sun { fill: var(--gold); }
+
+.treatment-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.treatment-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.main-tag {
+  background: var(--dark);
+  color: #ffffff;
+  font-size: 0.91rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.type-tag {
+  background: rgba(26,18,8,0.08);
+  color: #000000;
+  font-size: 0.91rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.price-tag {
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 1px 12px;
+  border-radius: 20px;
+}
+
+.treatment-tags { align-items: center; }
+
+.treatment-info h2 {
+  font-size: 2.08rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.treatment-info p {
+  font-size: 1.6rem;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  text-wrap: pretty;
+}
+
+.treatment-info h3 {
+  font-size: 1.69rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 24px 0 6px;
+}
+
+/* Punktliste med små gule prikker */
+.focus-list {
+  list-style: none;
+  margin-bottom: 12px;
+}
+.focus-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #000000;
+  text-wrap: pretty;
+}
+.focus-list li + li { margin-top: 10px; }
+.focus-list li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.62em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 1.5px var(--dark);
+}
+
+.treatment-info .good-for {
+  font-size: 1.41rem;
+  margin-bottom: 0;
+}
+
+.treatment-btn {
+  flex-shrink: 0;
+  background: var(--gold);
+  color: var(--dark);
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.07rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 50px;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.treatment-btn:hover { background: #fdd55e; transform: translateY(-1px); }
+
+/* FORLØB */
+.section-title {
+  font-size: 1.82rem;
+  font-weight: 700;
+  color: var(--dark);
+  border-bottom: 2px solid var(--dark);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.steps li {
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(26,18,8,0.1);
+  box-shadow: 0 2px 16px rgba(26,18,8,0.07);
+}
+
+.step-num {
+  display: block;
+  font-size: 3.12rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.steps h3 {
+  font-size: 1.69rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.steps p {
+  font-size: 1.41rem;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* SPØRGSMÅL OG SVAR */
+.faq-block { margin-bottom: 48px; }
+
+.faq-item {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(26,18,8,0.1);
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 14px 48px 14px 20px;
+  position: relative;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+}
+.faq-item[open] summary::after { content: '–'; }
+
+.faq-item p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 0 20px 16px;
+}
+
+.fineprint {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgba(26,18,8,0.7);
+}
+
+@media (max-width: 760px) {
+  .steps { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .main { padding: 90px 16px 60px; }
+  .treatment-card { flex-wrap: wrap; gap: 12px; padding: 20px; }
+  .treatment-icon { width: 48px; }
+  .treatment-info { flex-basis: 100%; }
+  .treatment-btn { width: 100%; text-align: center; }
+  .page-header h1 { font-size: 2rem; }
+}

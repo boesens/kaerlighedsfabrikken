@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <title>Anbefalinger – tantra, mentaltræning og reiki-healing | Kærlighedsfabrikken</title>
+  <meta name="description" content="Læs hvad andre siger om tantra, mentaltræning og reiki-healing hos Christian Mikkel i starten af Amager, København S – og del din egen oplevelse." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="da_DK" />
+  <meta property="og:site_name" content="Kærlighedsfabrikken" />
+  <meta property="og:title" content="Anbefalinger – tantra, mentaltræning og reiki-healing" />
+  <meta property="og:description" content="Læs hvad andre siger om tantra, mentaltræning og reiki-healing hos Christian Mikkel i starten af Amager, København S – og del din egen oplevelse." />
+  <link rel="stylesheet" href="book.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="anbefalinger.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Kærlighedsfabrikken</a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="behandlinger.html" aria-haspopup="true">Behandlinger <span class="caret" aria-hidden="true">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="behandlinger.html#tantra">Tantra</a></li>
+          <li><a href="behandlinger.html#mentaltraening">Mentaltræning</a></li>
+          <li><a href="behandlinger.html#reiki">Reiki-healing</a></li>
+        </ul>
+      </li>
+      <li><a href="om.html">Om mig</a></li>
+      <li><a href="anbefalinger.html" class="active">Anbefalinger</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li class="local-only"><a href="noter.html">Noter</a></li>
+    </ul>
+    <a href="book.html" class="btn-join">Book tid</a>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="behandlinger.html">Behandlinger</a>
+    <a href="behandlinger.html#tantra" class="mobile-sub">Tantra</a>
+    <a href="behandlinger.html#mentaltraening" class="mobile-sub">Mentaltræning</a>
+    <a href="behandlinger.html#reiki" class="mobile-sub">Reiki-healing</a>
+    <a href="om.html">Om mig</a>
+    <a href="anbefalinger.html">Anbefalinger</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="noter.html" class="local-only">Noter</a>
+    <a href="book.html" class="mobile-cta">Book tid</a>
+  </div>
+
+  <div class="page">
+
+    <main class="main">
+      <p class="eyebrow">✦ Tantra · Mentaltræning · Reiki-healing ✦</p>
+      <h1><span class="gold">Anbefalinger</span></h1>
+      <p class="lead">Her kan du læse, hvad andre har oplevet hos mig.</p>
+
+      <!--
+        SÅDAN TILFØJER DU EN ANBEFALING
+        Kopier blokken herunder ind i <section class="quotes"> og ret teksten.
+        Brug kun anbefalinger, hvor personen har givet lov (det gør de i formularen nedenfor).
+
+        <figure class="quote">
+          <blockquote>Skriv anbefalingen her.</blockquote>
+          <figcaption>Navn <span>· Tantra</span></figcaption>
+        </figure>
+      -->
+      <section class="quotes" aria-label="Anbefalinger">
+        <!-- FIKTIVT EKSEMPEL: vises kun lokalt (local-only), aldrig på den offentlige side -->
+        <figure class="quote local-only">
+          <p class="quote-example">Eksempel – kun synligt lokalt</p>
+          <blockquote>Jeg var nervøs, før jeg kom, men samtalen om mine grænser gjorde mig tryg fra start. Under massagen kunne jeg for første gang i lang tid bare give slip og være i min krop. Jeg gik derfra med en ro, der varede i flere dage.</blockquote>
+          <figcaption>Sofie, 38 år <span>· Tantra</span></figcaption>
+        </figure>
+        <p class="quotes-empty">De første anbefalinger er på vej. Har du været hos mig, vil jeg blive rigtig glad for at høre om din oplevelse.</p>
+      </section>
+
+      <h2 class="form-title">Del din <span class="gold">oplevelse</span></h2>
+      <p class="form-intro">Har du været hos mig? Skriv et par ord om, hvordan du oplevede det.</p>
+
+      <!-- Sendes til min Gmail via Google Apps Script (se anbefalinger.js) -->
+      <form class="form" id="reviewForm">
+        <input type="text" name="name" placeholder="Dit navn, som det må stå på siden (fx Mette, 42 år)" required />
+        <input type="email" name="email" placeholder="Din e-mail (vises ikke)" autocomplete="email" required />
+        <select name="treatment" required>
+          <option value="" disabled selected>Hvilken behandling fik du?</option>
+          <option>Tantra</option>
+          <option>Mentaltræning</option>
+          <option>Reiki-healing</option>
+        </select>
+        <textarea name="message" placeholder="Din anbefaling" required></textarea>
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span>Jeg giver lov til, at min anbefaling vises på hjemmesiden med det navn, jeg har skrevet.</span>
+        </label>
+        <!-- Fælde til spam-robotter: skjult felt, som mennesker ikke udfylder -->
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit">Send anbefaling</button>
+      </form>
+
+      <p class="disclaimer">Jeg læser alle anbefalinger, før de kommer på siden.</p>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Kærlighedsfabrikken &nbsp;·&nbsp; Tantra, mentaltræning og reiki-healing</p>
+    </footer>
+
+  </div>
+
+  <script src="anbefalinger.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

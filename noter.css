@@ -16,7 +16,7 @@ body {
 .bg {
   position: fixed;
   inset: 0;
-  background: url('hero.png') center top / cover no-repeat;
+  background: url('hero.svg') center top / cover no-repeat;
   z-index: 0;
   filter: var(--photo-filter) blur(1.2px);
   transform: scale(1.05);

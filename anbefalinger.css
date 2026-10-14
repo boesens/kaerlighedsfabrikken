@@ -1,0 +1,98 @@
+/* ANBEFALINGER: citater på lyst papir med gul skygge, som kalenderen */
+.quotes {
+  max-width: 640px;
+  margin: 0 auto 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  text-align: left;
+  padding-top: 26px;
+}
+
+.quote {
+  position: relative;
+  background: #fbf8f1;
+  border: 2.5px solid var(--dark);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 var(--gold);
+  padding: 30px 28px 22px;
+}
+
+/* Stort anførselstegn i hjørnet */
+.quote::before {
+  content: '“';
+  position: absolute;
+  top: -26px;
+  left: 18px;
+  font-size: 5rem;
+  line-height: 1;
+  background: var(--gold);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.quote blockquote {
+  font-size: 1.6rem;
+  line-height: 1.45;
+}
+
+.quote figcaption {
+  margin-top: 14px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.quote figcaption span {
+  font-weight: 400;
+  color: rgba(26,18,8,0.7);
+}
+
+/* Teksten "på vej" forsvinder af sig selv, når den første anbefaling er sat ind */
+.quotes-empty {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 24px;
+  border: 2px dashed rgba(26,18,8,0.3);
+  border-radius: 20px;
+}
+.quotes:has(.quote:not(.local-only)) .quotes-empty { display: none; }
+
+/* Mærkat på eksempler, der kun vises lokalt */
+.quote-example {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 2px 10px;
+  border: 1.5px dashed var(--dark);
+  border-radius: 8px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Samtykke-flueben */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.form .consent input {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  margin-top: 2px;
+  padding: 0;
+  accent-color: var(--dark);
+}
+
+@media (max-width: 640px) {
+  .quote { box-shadow: 5px 5px 0 var(--gold); margin-right: 5px; padding: 28px 20px 18px; }
+}

@@ -2,9 +2,9 @@
 // markeret som udført, og rækkefølgen gemmes i browserens localStorage – kun
 // på denne enhed og i denne browser.
 document.addEventListener('DOMContentLoaded', function () {
-  const KEY = 'spiridrinks-noter';
-  const DONE_KEY = 'spiridrinks-noter-udfoert';
-  const ORDER_KEY = 'spiridrinks-noter-raekkefoelge';
+  const KEY = 'behandler-noter';
+  const DONE_KEY = 'behandler-noter-udfoert';
+  const ORDER_KEY = 'behandler-noter-raekkefoelge';
   const form = document.getElementById('noteForm');
   const input = document.getElementById('noteText');
   const list = document.getElementById('noteList');

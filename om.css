@@ -15,7 +15,7 @@ body {
 .bg {
   position: fixed;
   inset: 0;
-  background: url('hero.png') center top / cover no-repeat;
+  background: url('hero.svg') center top / cover no-repeat;
   z-index: 0;
   filter: var(--photo-filter) blur(1.2px);
   transform: scale(1.05);
@@ -56,6 +56,7 @@ body {
 /* Analogt look: varm sort-hvid, filmkorn og mørke hjørner */
 .photo {
   width: 100%;
+  height: auto;
   border-radius: 2px;
   display: block;
   filter: grayscale(1) sepia(0.2) contrast(1.15) brightness(1.04);
@@ -92,7 +93,7 @@ body {
   font-size: 1.04rem;
   font-weight: 500;
   letter-spacing: 0.15em;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -153,6 +154,7 @@ h1 {
   text-wrap: pretty;
 }
 .story-block p + p { margin-top: 20px; }
+.story-block + .story-block { margin-top: 40px; }
 
 .highlight {
   background: rgba(252,201,53, 0.08);

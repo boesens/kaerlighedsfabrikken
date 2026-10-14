@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SpiriDrinks – Noter</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <title>Kærlighedsfabrikken – Noter</title>
   <meta name="robots" content="noindex" />
   <script>
     // Noter-siden vises kun lokalt (localhost eller åbnet direkte som fil)
@@ -18,23 +20,35 @@
   <div class="bg"></div>
 
   <nav class="nav">
-    <a href="index.html" class="nav-logo"><span class="logo-spiri">Spiri</span><span class="logo-drinks">Drinks</span></a>
+    <a href="index.html" class="nav-logo">Kærlighedsfabrikken</a>
     <ul class="nav-links">
-      <li><a href="events.html">SpiriDrinks Events</a></li>
-      <li><a href="filosofi.html">Filosofi</a></li>
-      <li><a href="vaert.html">Din vært</a></li>
+      <li class="has-dropdown">
+        <a href="behandlinger.html" aria-haspopup="true">Behandlinger <span class="caret" aria-hidden="true">▾</span></a>
+        <ul class="dropdown">
+          <li><a href="behandlinger.html#tantra">Tantra</a></li>
+          <li><a href="behandlinger.html#mentaltraening">Mentaltræning</a></li>
+          <li><a href="behandlinger.html#reiki">Reiki-healing</a></li>
+        </ul>
+      </li>
+      <li><a href="om.html">Om mig</a></li>
+      <li><a href="anbefalinger.html">Anbefalinger</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
       <li class="local-only"><a href="noter.html" class="active">Noter</a></li>
     </ul>
-    <a href="tilmeld.html" class="btn-join">Inviter mig</a>
+    <a href="book.html" class="btn-join">Book tid</a>
     <button class="hamburger" id="hamburger">☰</button>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="events.html">SpiriDrinks Events</a>
-    <a href="filosofi.html">Filosofi</a>
-    <a href="vaert.html">Din vært</a>
+    <a href="behandlinger.html">Behandlinger</a>
+    <a href="behandlinger.html#tantra" class="mobile-sub">Tantra</a>
+    <a href="behandlinger.html#mentaltraening" class="mobile-sub">Mentaltræning</a>
+    <a href="behandlinger.html#reiki" class="mobile-sub">Reiki-healing</a>
+    <a href="om.html">Om mig</a>
+    <a href="anbefalinger.html">Anbefalinger</a>
+    <a href="kontakt.html">Kontakt</a>
     <a href="noter.html" class="local-only">Noter</a>
-    <a href="tilmeld.html" class="mobile-cta">Inviter mig</a>
+    <a href="book.html" class="mobile-cta">Book tid</a>
   </div>
 
   <main class="main">
@@ -47,9 +61,21 @@
     </form>
 
     <div class="notes" id="noteList">
-      <article class="note" data-id="2026-10-11-logo">
-        <p class="note-date">11. oktober 2026</p>
-        <p class="note-text">Logo skal være anderledes, der er ubalance i logo.</p>
+      <article class="note" data-id="2026-10-12-tekster">
+        <p class="note-date">12. oktober 2026</p>
+        <p class="note-text">Alle tekster er et første udkast – læs dem igennem og ret, så de passer til mig og min måde at arbejde på.</p>
+      </article>
+      <article class="note" data-id="2026-10-12-priser">
+        <p class="note-date">12. oktober 2026</p>
+        <p class="note-text">Mangler: priser, varighed og adresse på behandlingerne.</p>
+      </article>
+      <article class="note" data-id="2026-10-12-booking">
+        <p class="note-date">12. oktober 2026</p>
+        <p class="note-text">Booking: alle tre behandlinger bruger samme Google-aftaleplan på 2 timer (gratis konto = kun én plan). Spørgsmål-siden: læg google-apps-script.js ind på script.google.com, implementér som webapp og sæt URL'en ind i kontakt.js. (FormSubmit blev blokeret af TDC Erhvervs internetfilter.)</p>
+      </article>
+      <article class="note" data-id="2026-10-12-tegning">
+        <p class="note-date">12. oktober 2026</p>
+        <p class="note-text">Baggrundstegningen (hero.svg) er en midlertidig tegning. Skift den evt. ud med en håndtegnet i samme stil som SpiriDrinks.</p>
       </article>
     </div>
   </main>
