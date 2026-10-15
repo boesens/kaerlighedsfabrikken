@@ -2,6 +2,16 @@
 // på localhost eller når siden åbnes direkte som fil
 if (['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname)) {
   document.documentElement.classList.add('is-local');
+
+  // Online viser GitHub Pages siderne uden .html (fx /om). Lokalt findes kun
+  // filerne, så her sættes .html på igen, og forsiden peger på index.html.
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      const href = link.getAttribute('href');
+      if (href === '/') link.setAttribute('href', 'index.html');
+      else if (/^[a-z]+(#.*)?$/.test(href)) link.setAttribute('href', href.replace(/^([a-z]+)/, '$1.html'));
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
