@@ -59,20 +59,15 @@
 
     <div class="profile">
       <div class="photo-wrap">
-        <!-- Browseren vælger selv den mindste fil, der er skarp nok: WebP hvis den kan, ellers JPEG.
-             Billedet vises 280 px bredt på computer og 200 px på mobil (op til 3x til skarpe skærme). -->
-        <picture>
-          <source type="image/webp"
-                  srcset="img/christian-300.webp 300w, img/christian-600.webp 600w, img/christian-900.webp 900w"
-                  sizes="(max-width: 860px) 200px, 280px" />
-          <img src="img/christian-600.jpg"
-               srcset="img/christian-300.jpg 300w, img/christian-600.jpg 600w, img/christian-900.jpg 900w"
-               sizes="(max-width: 860px) 200px, 280px"
-               width="900" height="1229"
-               alt="Christian Mikkel, behandler i tantra, bevidsthedstræning og reiki-healing"
-               class="photo" fetchpriority="high" decoding="async"
-               onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'" />
-        </picture>
+        <!-- Browseren vælger selv den mindste JPEG, der er skarp nok. Billedet vises
+             280 px bredt på computer og 200 px på mobil (op til 3x til skarpe skærme). -->
+        <img src="img/christian-600.jpg"
+             srcset="img/christian-300.jpg 300w, img/christian-600.jpg 600w, img/christian-900.jpg 900w"
+             sizes="(max-width: 860px) 200px, 280px"
+             width="900" height="1228"
+             alt="Christian Mikkel, behandler i tantra, bevidsthedstræning og reiki-healing"
+             class="photo" fetchpriority="high" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
         <div class="photo-placeholder">CM</div>
       </div>
 
