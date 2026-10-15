@@ -299,6 +299,15 @@ body {
   padding: 0 20px 16px;
 }
 
+.steps a {
+  color: var(--dark);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+.steps a:hover { text-decoration-color: var(--dark); }
+
 .fineprint {
   font-size: 1.2rem;
   line-height: 1.5;

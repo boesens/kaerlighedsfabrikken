@@ -6,12 +6,12 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <title>Kontakt – behandler på Amager, København S | Kærlighedsfabrikken</title>
-  <meta name="description" content="Kontakt mig om tantra, mentaltræning eller reiki-healing. Ring på 31 65 87 39 eller skriv – praksis i starten af Amager, 2300 København S." />
+  <meta name="description" content="Kontakt mig om tantra, bevidsthedstræning eller reiki-healing. Ring på 31 65 87 39 eller skriv – praksis på Under Elmene 13, 2300 København S." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="da_DK" />
   <meta property="og:site_name" content="Kærlighedsfabrikken" />
   <meta property="og:title" content="Kontakt – behandler på Amager, København S" />
-  <meta property="og:description" content="Kontakt mig om tantra, mentaltræning eller reiki-healing. Ring på 31 65 87 39 eller skriv – praksis i starten af Amager, 2300 København S." />
+  <meta property="og:description" content="Kontakt mig om tantra, bevidsthedstræning eller reiki-healing. Ring på 31 65 87 39 eller skriv – praksis på Under Elmene 13, 2300 København S." />
   <link rel="stylesheet" href="book.css" />
   <link rel="stylesheet" href="nav.css" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
@@ -27,7 +27,7 @@
         <a href="behandlinger.html" aria-haspopup="true">Behandlinger <span class="caret" aria-hidden="true">▾</span></a>
         <ul class="dropdown">
           <li><a href="behandlinger.html#tantra">Tantra</a></li>
-          <li><a href="behandlinger.html#mentaltraening">Mentaltræning</a></li>
+          <li><a href="behandlinger.html#bevidsthedstraening">Bevidsthedstræning</a></li>
           <li><a href="behandlinger.html#reiki">Reiki-healing</a></li>
         </ul>
       </li>
@@ -43,7 +43,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="behandlinger.html">Behandlinger</a>
     <a href="behandlinger.html#tantra" class="mobile-sub">Tantra</a>
-    <a href="behandlinger.html#mentaltraening" class="mobile-sub">Mentaltræning</a>
+    <a href="behandlinger.html#bevidsthedstraening" class="mobile-sub">Bevidsthedstræning</a>
     <a href="behandlinger.html#reiki" class="mobile-sub">Reiki-healing</a>
     <a href="om.html">Om mig</a>
     <a href="anbefalinger.html">Anbefalinger</a>
@@ -55,9 +55,9 @@
   <div class="page">
 
     <main class="main">
-      <p class="eyebrow">✦ Tantra · Mentaltræning · Reiki-healing ✦</p>
+      <p class="eyebrow">✦ Tantra · Bevidsthedstræning · Reiki-healing ✦</p>
       <h1><span class="gold">Kontakt</span> mig</h1>
-      <p class="lead">Ring eller skriv til mig, så vender jeg tilbage hurtigst muligt.</p>
+      <p class="lead">Har du spørgsmål, kan du skrive til mig via formularen eller ringe til mig. Hvis jeg ikke besvarer dit opkald, ringer jeg tilbage.</p>
 
       <div class="contact-info">
         <!-- Nummeret står ikke her i koden: kontakt.js sætter det sammen, så spam-robotter ikke finder det -->
@@ -66,18 +66,18 @@
           <a class="contact-value" id="phoneLink"></a>
         </p>
         <p class="contact-row">
-          <span class="contact-label">Sted</span>
-          <span class="contact-value contact-plain">Starten af Amager<br />2300 København S</span>
+          <span class="contact-label">Adresse</span>
+          <a class="contact-value" href="https://www.google.com/maps/search/?api=1&amp;query=Under+Elmene+13,+2300+K%C3%B8benhavn+S" target="_blank" rel="noopener">Under Elmene 13, 5. tv.<br />2300 København S</a>
         </p>
       </div>
 
       <section class="place">
         <h2 class="form-title">Her foregår <span class="gold">behandlingerne</span></h2>
-        <p>Min praksis ligger i starten af Amager i København, i min private lejlighed, hvor jeg har indrettet et særskilt rum til behandlinger. Her finder du rolige og behagelige omgivelser med plads til nærvær, fordybelse og personlig udvikling.</p>
-        <p>Behandlingerne foregår efter aftale på udvalgte aftener. Den præcise adresse får du i forbindelse med booking.</p>
+        <p>Min praksis ligger i min private lejlighed, hvor jeg har indrettet et særskilt rum til behandlinger. Her finder du rolige og behagelige omgivelser med plads til nærvær, fordybelse og personlig udvikling.</p>
+        <p>Behandlingerne foregår efter aftale på udvalgte aftener.</p>
       </section>
 
-      <h2 class="form-title">Har du <span class="gold">spørgsmål</span>?</h2>
+      <h2 class="form-title" id="spoergsmaal">Har du <span class="gold">spørgsmål</span>?</h2>
 
       <!-- Sendes til min Gmail via Google Apps Script (se kontakt.js og google-apps-script.js) -->
       <form class="form" id="contactForm">
@@ -85,9 +85,9 @@
         <input type="email" name="email" placeholder="Din e-mail" autocomplete="email" required />
         <input type="tel" name="phone" placeholder="Telefonnummer (valgfrit)" autocomplete="tel" />
         <select name="treatment" aria-label="Hvad handler dit spørgsmål om?">
-          <option value="">Hvad handler dit spørgsmål om? (valgfrit)</option>
+          <option value="">Hvad handler det om? (valgfrit)</option>
           <option>Tantra</option>
-          <option>Mentaltræning</option>
+          <option>Bevidsthedstræning</option>
           <option>Reiki-healing</option>
           <option>Noget andet</option>
         </select>
@@ -101,7 +101,7 @@
     </main>
 
     <footer class="footer">
-      <p>© 2026 Kærlighedsfabrikken &nbsp;·&nbsp; Tantra, mentaltræning og reiki-healing</p>
+      <p>© 2026 Kærlighedsfabrikken &nbsp;·&nbsp; Tantra, bevidsthedstræning og reiki-healing</p>
     </footer>
 
   </div>

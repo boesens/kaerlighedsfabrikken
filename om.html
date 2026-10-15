@@ -6,12 +6,12 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <title>Om Christian Mikkel – behandler i København S | Kærlighedsfabrikken</title>
-  <meta name="description" content="Mød Christian Mikkel, behandler i tantra, mentaltræning og reiki-healing på Amager i København. Jordnær tilgang med konkrete redskaber til hverdagen." />
+  <meta name="description" content="Mød Christian Mikkel og hans vej til healing, bevidsthedstræning og tantra – og hans ønske om at hjælpe mennesker tættere på sig selv. Amager, København S." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="da_DK" />
   <meta property="og:site_name" content="Kærlighedsfabrikken" />
   <meta property="og:title" content="Om Christian Mikkel – behandler i København S" />
-  <meta property="og:description" content="Mød Christian Mikkel, behandler i tantra, mentaltræning og reiki-healing på Amager i København. Jordnær tilgang med konkrete redskaber til hverdagen." />
+  <meta property="og:description" content="Mød Christian Mikkel og hans vej til healing, bevidsthedstræning og tantra – og hans ønske om at hjælpe mennesker tættere på sig selv. Amager, København S." />
   <link rel="stylesheet" href="om.css" />
   <link rel="stylesheet" href="nav.css" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet" />
@@ -27,7 +27,7 @@
         <a href="behandlinger.html" aria-haspopup="true">Behandlinger <span class="caret" aria-hidden="true">▾</span></a>
         <ul class="dropdown">
           <li><a href="behandlinger.html#tantra">Tantra</a></li>
-          <li><a href="behandlinger.html#mentaltraening">Mentaltræning</a></li>
+          <li><a href="behandlinger.html#bevidsthedstraening">Bevidsthedstræning</a></li>
           <li><a href="behandlinger.html#reiki">Reiki-healing</a></li>
         </ul>
       </li>
@@ -43,7 +43,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="behandlinger.html">Behandlinger</a>
     <a href="behandlinger.html#tantra" class="mobile-sub">Tantra</a>
-    <a href="behandlinger.html#mentaltraening" class="mobile-sub">Mentaltræning</a>
+    <a href="behandlinger.html#bevidsthedstraening" class="mobile-sub">Bevidsthedstræning</a>
     <a href="behandlinger.html#reiki" class="mobile-sub">Reiki-healing</a>
     <a href="om.html">Om mig</a>
     <a href="anbefalinger.html">Anbefalinger</a>
@@ -56,7 +56,20 @@
 
     <div class="profile">
       <div class="photo-wrap">
-        <img src="christian.jpg" alt="Christian Mikkel, behandler i tantra, mentaltræning og reiki-healing" class="photo" width="800" height="1092" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <!-- Browseren vælger selv den mindste fil, der er skarp nok: WebP hvis den kan, ellers JPEG.
+             Billedet vises 280 px bredt på computer og 200 px på mobil (op til 3x til skarpe skærme). -->
+        <picture>
+          <source type="image/webp"
+                  srcset="img/christian-300.webp 300w, img/christian-600.webp 600w, img/christian-900.webp 900w"
+                  sizes="(max-width: 860px) 200px, 280px" />
+          <img src="img/christian-600.jpg"
+               srcset="img/christian-300.jpg 300w, img/christian-600.jpg 600w, img/christian-900.jpg 900w"
+               sizes="(max-width: 860px) 200px, 280px"
+               width="900" height="1229"
+               alt="Christian Mikkel, behandler i tantra, bevidsthedstræning og reiki-healing"
+               class="photo" fetchpriority="high" decoding="async"
+               onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'" />
+        </picture>
         <div class="photo-placeholder">CM</div>
       </div>
 
@@ -66,23 +79,45 @@
 
         <div class="tags">
           <span>Tantra</span>
-          <span>Mentaltræning</span>
+          <span>Bevidsthedstræning</span>
           <span>Reiki-healing</span>
         </div>
 
+        <h2 class="story-title">Min vej til healing, bevidsthed og tantra</h2>
+
         <div class="story-block">
-          <h2>Hvorfor jeg gør det her</h2>
-          <p>Jeg har altid haft en naturlig interesse for mennesker – for hvad der driver os, hvad der begrænser os, og hvad der hjælper os med at udvikle os. Jeg har ofte været den, andre søger råd og sparring hos. Nu vil jeg bruge den interesse mere målrettet til at hjælpe mennesker, der aktivt ønsker at skabe forandringer i deres liv.</p>
+          <h3>Min spirituelle rejse</h3>
+          <p>Jeg tror på, at vi alle har en sjæl, og at kroppen blot er et hylster, vi låner for en tid, indtil den dag, vi skal herfra. Den overbevisning har fulgt mig siden barndommen, måske fordi jeg som fireårig oplevede noget ganske særligt under en næseoperation. Her oplevede jeg, at min bevidsthed svævede op over min egen krop, samtidig med at jeg opfangede, hvad der foregik på operationsstuen.</p>
+          <p>Jeg tror, at denne oplevelse var med til at vække min interesse for det spirituelle og for de sider af livet, som endnu ikke kan forklares af videnskaben. Siden da har jeg haft flere spirituelle oplevelser, som har sat dybe spor i mig og været med til at forme mig som menneske.</p>
         </div>
 
         <div class="story-block">
-          <h2>Min egen rejse</h2>
-          <p>Jeg har selv været igennem en livsrejse med udfordringer, modgang og personlig udvikling. Undervejs har jeg i mange år bevæget mig i det spirituelle miljø, og det har givet mig erfaringer, indsigt og konkrete værktøjer, som har gjort en forskel for mig.</p>
+          <h3>Healing – vejen til indre balance</h3>
+          <p>Healing har haft en afgørende betydning for min personlige udvikling. Gennem healing har jeg oplevet, hvordan mit liv gradvist er kommet i en balance, jeg aldrig havde forestillet mig mulig.</p>
+          <p>I begyndelsen reagerede min krop voldsomt med spasmer, gråd og ukontrollerbare latteranfald. Det var intense oplevelser, hvor følelser og gamle traumer syntes at komme til overfladen og blive forløst. Over nogle måneder oplevede jeg en markant forandring i mig selv og min måde at være i verden på.</p>
+          <p>I dag bruger jeg healing som et redskab til at finde tilbage til min indre balance og skabe ro i hverdagen. Jeg er et meget følsomt menneske, der mærker både mine egne og mine omgivelsers indtryk stærkt. Derfor har jeg lært, hvor vigtigt det er at give mig selv plads til at finde ro, give slip og genoprette balancen.</p>
         </div>
 
         <div class="story-block">
-          <h2>Udvalgte aftener</h2>
-          <p>Min praksis er indtil videre en bibeskæftigelse ved siden af mit fuldtidsjob. Derfor tilbyder jeg behandlinger og samtaler på udvalgte aftener, hvor jeg har tid og overskud til at fordybe mig i det enkelte menneske.</p>
+          <h3>Bevidsthedstræning – forstå dig selv og dine tanker</h3>
+          <p>Min interesse for bevidsthedstræning udspringer af min nysgerrighed på psykologi og de tankeprocesser, der påvirker vores følelsesliv og vores måde at opleve verden på.</p>
+          <p>Jeg har erfaret, at healing kan hjælpe mig med at genfinde min indre balance, men hvis jeg ikke samtidig forstår mine tanker og deres indflydelse på mine følelser, risikerer jeg at skabe ubalance igen. Derfor ser jeg bevidsthedstræning som en vigtig del af mit personlige arbejde og som en værktøjskasse, der hjælper mig med at skabe en sundere bevidsthed i hverdagen.</p>
+          <p>Ligesom kroppen har brug for den rette næring, har vores bevidsthed det også. Det handler både om, hvad vi vælger at give den næring gennem vores tanker, fokus og handlinger, og hvad vi bevidst vælger ikke at give plads til. Ved at blive mere opmærksomme på vores tankemønstre kan vi lære at tage større ansvar for vores følelsesliv og skabe et stærkere fundament for indre ro, balance og livsglæde.</p>
+        </div>
+
+        <div class="story-block">
+          <h3>Tantra – nærvær, intimitet og nydelse</h3>
+          <p>Det seksuelle har altid været en vigtig drivkraft i mit liv, og jeg har gennem årene været nysgerrig på de mange facetter af seksualitet og menneskelig intimitet. Denne nysgerrighed har ført mig til tantra, som jeg i dag finder særligt fascinerende.</p>
+          <p>For mig handler tantra om langt mere end det seksuelle. Det handler om at forene opmærksomhed, nærvær og nydelse og om at være fuldt til stede i mødet med et andet menneske. Om at turde sænke tempoet, give slip på forventninger og i stedet mærke det, der opstår i nuet.</p>
+          <p>Jeg er især optaget af det dybe nærvær, der kan opstå mellem mand og kvinde, når begge tør være åbne, sansende og til stede uden at skulle præstere eller leve op til bestemte forventninger. Jeg tror, at denne form for intimitet kan åbne for en dybere forbindelse, som mange sjældent oplever i deres hverdag eller i deres parforhold.</p>
+          <p>For mig er tantra en mulighed for at udforske intimitet på et dybere plan, hvor kontakten til kroppen, sanserne og det andet menneske får lov til at fylde mere end tankerne og forventningerne.</p>
+        </div>
+
+        <div class="story-block">
+          <h3>Mit formål med behandlingerne</h3>
+          <p>På tværs af healing, bevidsthedstræning og tantra er mit ønske det samme: at hjælpe mennesker med at komme tættere på sig selv.</p>
+          <p>Jeg ønsker at skabe et trygt rum, hvor der er plads til at mærke sig selv, udforske sine følelser og sin krop, give slip på det, der tynger, og styrke kærligheden til sig selv.</p>
+          <p>Mit håb er, at de mennesker, der kommer hos mig, går herfra med en dybere forbindelse til sig selv og livet – og med mere ro, nærvær, selvkærlighed og livsglæde.</p>
         </div>
 
         <div class="cta-block">

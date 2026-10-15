@@ -135,10 +135,20 @@ h1 {
 
 /* STORY */
 .story-block {
-  margin-top: 56px;
+  margin-top: 32px;
 }
 
-.story-block h2 {
+.story-title {
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 48px;
+  color: var(--dark);
+}
+
+.story-block h2,
+.story-block h3 {
   font-family: 'Patrick Hand SC', cursive;
   font-size: 2.21rem;
   font-weight: 700;
