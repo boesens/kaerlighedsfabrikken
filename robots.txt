@@ -25,3 +25,5 @@ Allow: /
 # Google Gemini / AI-oversigter
 User-agent: Google-Extended
 Allow: /
+
+Sitemap: https://xn--krlighedsfabrikken-oub.dk/sitemap.xml
