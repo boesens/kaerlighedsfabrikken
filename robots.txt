@@ -26,4 +26,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://xn--krlighedsfabrikken-oub.dk/sitemap.xml
+Sitemap: https://kaerlighedsfabrikken.dk/sitemap.xml

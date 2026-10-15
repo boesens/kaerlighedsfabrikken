@@ -20,8 +20,8 @@
 
 ## Sider
 
-- [Behandlinger](https://xn--krlighedsfabrikken-oub.dk/behandlinger.html): Beskrivelse af tantra, bevidsthedstræning og reiki-healing samt spørgsmål og svar
-- [Om mig](https://xn--krlighedsfabrikken-oub.dk/om.html): Om Christian Mikkel og hans baggrund
-- [Anbefalinger](https://xn--krlighedsfabrikken-oub.dk/anbefalinger.html): Anbefalinger fra kunder
-- [Book tid](https://xn--krlighedsfabrikken-oub.dk/book.html): Priser og ledige tider
-- [Kontakt](https://xn--krlighedsfabrikken-oub.dk/kontakt.html): Telefon, område og kontaktformular
+- [Behandlinger](https://kaerlighedsfabrikken.dk/behandlinger.html): Beskrivelse af tantra, bevidsthedstræning og reiki-healing samt spørgsmål og svar
+- [Om mig](https://kaerlighedsfabrikken.dk/om.html): Om Christian Mikkel og hans baggrund
+- [Anbefalinger](https://kaerlighedsfabrikken.dk/anbefalinger.html): Anbefalinger fra kunder
+- [Book tid](https://kaerlighedsfabrikken.dk/book.html): Priser og ledige tider
+- [Kontakt](https://kaerlighedsfabrikken.dk/kontakt.html): Telefon, område og kontaktformular
