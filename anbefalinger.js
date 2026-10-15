@@ -1,3 +1,10 @@
+// Lokalt (på din egen computer) indlæses fiktive eksempler, så du kan se layoutet
+if (['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname)) {
+  const eks = document.createElement('script');
+  eks.src = 'anbefalinger-eksempler.js';
+  document.head.appendChild(eks);
+}
+
 // Sender anbefalingen til din Gmail via samme Google Apps Script som kontaktformularen.
 // Den kommer ikke automatisk på siden: du sætter den selv ind i anbefalinger.html.
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxv166m7fpOcIWVIO-CQ21eJVLBvPMQZhIsBulaWSPAxnaMr1BdQVpyyl1h7Hngy99Lng/exec";
